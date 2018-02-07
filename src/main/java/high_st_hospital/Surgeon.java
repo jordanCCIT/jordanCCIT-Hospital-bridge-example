@@ -26,4 +26,8 @@ public class Surgeon extends Doctor {
 
 	}
 
+	@Override
+	public String toString() {
+		return empName + "\t" + empNumber + "\t" + doctorSpeciality + "\t" + isOperating;
+	}
 }

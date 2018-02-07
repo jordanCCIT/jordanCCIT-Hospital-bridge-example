@@ -7,23 +7,30 @@ import org.junit.Test;
 
 public class ReceptionistTest {
 	@Test
-	public void shouldAnswerPhone() {
+	public void shouldBeAnEmployee() {
 		Employee underTest = new Receptionist("Barb", "1141");
+		assertThat(underTest.getName(), is("Barb"));
+		assertThat(underTest.getNumber(), is("1141"));
+	}
+
+	Receptionist underTest = new Receptionist("Barb", "1141");
+
+	@Test
+	public void shouldHaveASalaryOf45000() {
+		assertThat(underTest.getSalary(), is(45000));
 	}
 
 	@Test
-	public void shouldHaveAName() {
-		assertThat(underTest.getName(), is(DOCTOR_NAME));
+	public void receptionistShouldBeAnsweringPhones() {
+		Hospital testBuilding = new Hospital();
+		underTest.answerPhones(testBuilding);
+		boolean result = underTest.getIsAnsweringPhones();
+		assertThat(result, is(true));
 	}
 
 	@Test
-	public void shouldHaveANumber() {
-		assertThat(underTest.getNumber(), is(DOCTOR_EMPLOYEE_NUMBER));
+	public void receptionistShouldNotBeAnsweringPhones() {
+		boolean result = underTest.getIsAnsweringPhones();
+		assertThat(result, is(false));
 	}
-
-	@Test
-	public void shouldHaveASalary() {
-		assertThat(underTest.getSalary(), is(90000));
-	}
-
 }

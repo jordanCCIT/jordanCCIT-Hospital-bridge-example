@@ -1,8 +1,8 @@
 package high_st_hospital;
 
-public class Doctor extends Employee {
+public class Doctor extends Employee implements MedicalDuties {
 
-	private String doctorSpeciality;
+	protected String doctorSpeciality;
 
 	public Doctor(String empName, String empNumber, String speciality) {
 
@@ -22,4 +22,20 @@ public class Doctor extends Employee {
 		return doctorSpeciality;
 	}
 
+	@Override
+	public void careForPatient(Patient patient) {
+		patient.improveHealth(20);
+
+	}
+
+	@Override
+	public void drawBloods(Patient patient) {
+		patient.giveBloods(5);
+
+	}
+
+	@Override
+	public String toString() {
+		return empName + "\t" + empNumber + "\t" + doctorSpeciality;
+	}
 }

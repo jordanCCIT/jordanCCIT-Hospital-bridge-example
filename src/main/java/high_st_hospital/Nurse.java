@@ -2,7 +2,7 @@ package high_st_hospital;
 
 import java.util.ArrayList;
 
-public class Nurse extends Employee {
+public class Nurse extends Employee implements MedicalDuties {
 	private ArrayList<Patient> patientsUnderCare = new ArrayList<Patient>();
 
 	public Nurse(String empName, String empNumber) {
@@ -24,4 +24,18 @@ public class Nurse extends Employee {
 		return patientsUnderCare.size();
 	}
 
+	@Override
+	public void careForPatient(Patient patient) {
+		patient.improveHealth(5);
+	}
+
+	@Override
+	public void drawBloods(Patient patient) {
+		patient.giveBloods(5);
+	}
+
+	@Override
+	public String toString() {
+		return empName + "\t" + empNumber + "\t" + this.numberOfPatients();
+	}
 }

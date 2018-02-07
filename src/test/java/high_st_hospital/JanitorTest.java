@@ -6,14 +6,17 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 public class JanitorTest {
+	private static final String JANITOR_EMPLOYEE_NUMBER = "1131";
+	private static final String JANITOR_NAME = "Bob";
+
 	@Test
 	public void janitorShouldHaveAName() {
-		Employee underTest = new Janitor("Bob", "1131");
+		Employee underTest = new Janitor(JANITOR_NAME, JANITOR_EMPLOYEE_NUMBER);
 		String result = underTest.getName();
-		assertThat(result, is("Bob"));
+		assertThat(result, is(JANITOR_NAME));
 	}
 
-	Janitor underTest = new Janitor("Bob", "1131");
+	Janitor underTest = new Janitor(JANITOR_NAME, JANITOR_EMPLOYEE_NUMBER);
 
 	@Test
 	public void janitorShouldBeSweeping() {
@@ -25,7 +28,7 @@ public class JanitorTest {
 
 	@Test
 	public void shouldHaveANumber() {
-		assertThat(underTest.getNumber(), is("1131"));
+		assertThat(underTest.getNumber(), is(JANITOR_EMPLOYEE_NUMBER));
 	}
 
 	@Test

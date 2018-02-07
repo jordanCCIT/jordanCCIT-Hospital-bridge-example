@@ -23,6 +23,6 @@ public abstract class Employee {
 
 	@Override
 	public String toString() {
-		return empName;
+		return empName + "\t" + empNumber;
 	}
 }

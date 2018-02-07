@@ -2,14 +2,31 @@ package high_st_hospital;
 
 public class Receptionist extends Employee {
 
+	private boolean isAnsweringPhones;
+
 	public Receptionist(String empName, String empNumber) {
-		// TODO Auto-generated constructor stub
+		this.empName = empName;
+		this.empNumber = empNumber;
 	}
 
 	@Override
 	public int getSalary() {
-		// TODO Auto-generated method stub
-		return 0;
+
+		return 45000;
 	}
 
+	public void answerPhones(Hospital testBuilding) {
+		isAnsweringPhones = true;
+
+	}
+
+	public boolean getIsAnsweringPhones() {
+
+		return isAnsweringPhones;
+	}
+
+	@Override
+	public String toString() {
+		return empName + "\t" + empNumber + "\t" + isAnsweringPhones;
+	}
 }
