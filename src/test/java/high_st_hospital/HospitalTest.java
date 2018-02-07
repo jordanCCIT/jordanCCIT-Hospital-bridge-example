@@ -3,6 +3,9 @@ package high_st_hospital;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.junit.Test;
 
 public class HospitalTest {
@@ -34,6 +37,27 @@ public class HospitalTest {
 		underTest.hire(testJanitor);
 		int result = underTest.staffSize();
 		assertThat(result, is(3));
+	}
+
+	@Test
+	public void shouldReturnAListOfAllEmployees() {
+		underTest.hire(testDoctor);
+		underTest.hire(testNurse);
+		underTest.hire(testJanitor);
+		Collection<Employee> allEmployees = new ArrayList<>(underTest.getAllEmployees());
+		assertThat(underTest.getAllEmployees().contains(testDoctor), is(true));
+		assertThat(allEmployees.contains(testJanitor), is(true));
+		assertThat(allEmployees.contains(testNurse), is(true));
+	}
+
+	@Test
+	public void shouldFireJanitors() {
+		underTest.hire(testDoctor);
+		underTest.hire(testNurse);
+		underTest.hire(testJanitor);
+		underTest.fire(JANITOR_EMPLOYEE_NUMBER);
+		Collection<Employee> allEmployees = new ArrayList<>(underTest.getAllEmployees());
+		assertThat(allEmployees.contains(testJanitor), is(false));
 	}
 
 }
