@@ -1,18 +1,16 @@
 package high_st_hospital;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class HospitalRoom {
 
-	protected ArrayList<Patient> patients = new ArrayList<>();
+	protected Map<String, Patient> roomOccupants = new HashMap<String, Patient>();
 
-	public int numberOfPatients() {
-		return patients.size();
-	}
+	public abstract void checkIn(Patient patient);
 
-	public void transfer(Patient testPatient1, HospitalRoom transferTo) {
-		// TODO Auto-generated method stub
+	public abstract int numberOfPatients();
 
-	}
+	public abstract void transfer(Patient testPatient1, HospitalRoom transferTo);
 
 }
