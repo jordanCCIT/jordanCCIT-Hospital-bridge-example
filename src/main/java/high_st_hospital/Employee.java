@@ -1,28 +1,26 @@
 package high_st_hospital;
 
 public abstract class Employee {
-
 	protected String empName;
 	protected String empNumber;
 
-	public String getName() {
-
+	public String getEmpName(){
 		return empName;
 	}
 
-	public String getNumber() {
-
+	public String getempNumber(){
 		return empNumber;
 	}
 
 	public abstract int getSalary();
 
-	public String salaryInfo() {
+	public String salaryInfo(){
 		return "This employee's salary is " + getSalary();
 	}
 
-	@Override
-	public String toString() {
+	public String toString(){
 		return empName + "\t" + empNumber;
 	}
+
+
 }

@@ -1,43 +1,32 @@
 package high_st_hospital;
 
 public class Patient {
+    private String patientIdentifier;
+    private int health;
+    private int blood;
 
-	private String patientIdentifier;
-	private int health;
-	private int bloods;
+    public Patient(String patientIdentifier) {
+        this.patientIdentifier = patientIdentifier;
+    }
 
-	public String getPatientIdentifier() {
-		return patientIdentifier;
-	}
+    public String getPatientIdentifier() {
+        return patientIdentifier;
+    }
 
-	public int getHealth() {
-		return health;
-	}
+    public int getBlood(){
+        return blood;
+    }
 
-	public int getBloods() {
+    public void improveHealth(int care){
+        health+=care;
+    }
 
-		return bloods;
-	}
+    @Override
+    public String toString(){
+        return patientIdentifier;
+    }
 
-	public Patient() {
-
-	}
-
-	public Patient(String patientIdentifier) {
-		this.patientIdentifier = patientIdentifier;
-	}
-
-	public void improveHealth(int care) {
-		health = +care;
-	}
-
-	public void giveBloods(int bloodDraw) {
-
-		bloods = -bloodDraw;
-	}
-
-	@Override
-	public String toString() {
-		return patientIdentifier;
-	}
+    /*public void giveBlood(){
+        blood-=bloodDraw;
+    }*/
 }
