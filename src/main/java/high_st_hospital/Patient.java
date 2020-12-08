@@ -26,7 +26,7 @@ public class Patient {
         return patientIdentifier;
     }
 
-    /*public void giveBlood(){
+    public void giveBlood(int bloodDraw){
         blood-=bloodDraw;
-    }*/
+    }
 }

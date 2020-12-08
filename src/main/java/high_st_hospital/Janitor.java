@@ -1,5 +1,5 @@
 package high_st_hospital;
 
-public class Janitor extends Employee {
+/*public class Janitor extends Employee {
 
-}
+}*/
