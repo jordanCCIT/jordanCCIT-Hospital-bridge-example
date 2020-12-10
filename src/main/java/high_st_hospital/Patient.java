@@ -29,4 +29,8 @@ public class Patient {
     public void giveBlood(int bloodDraw){
         blood-=bloodDraw;
     }
+
+    public int getHealth(){
+        return health;
+    }
 }

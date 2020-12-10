@@ -29,8 +29,37 @@ public class NurseTest {
     @Test
     public void shouldReturnAmountOfPatientsUnderTheirCareAs1(){
         Patient testPatient1 = new Patient("1111");
-        underTest.careForPatient(testPatient1);
+        underTest.lookAfter(testPatient1);
         int result = underTest.numberOfPatients();
         assertEquals(result,1);
+    }
+
+    @Test
+    public void shouldReturnAmountOfPatientsUnderTheirCareAs2(){
+        Patient testPatient1 = new Patient("1111");
+        Patient testPatient2 = new Patient("1112");
+        underTest.lookAfter(testPatient1);
+        underTest.lookAfter(testPatient2);
+        int result = underTest.numberOfPatients();
+        assertEquals(result,2);
+    }
+
+    @Test
+    public void shouldDrawBloodFromPatient(){
+        Patient testPatient1 = new Patient("1111");
+        int beforeBloodDraw = testPatient1.getBlood();
+        underTest.drawBlood(testPatient1);
+        int afterBloodDraw = testPatient1.getBlood();
+        assertEquals(afterBloodDraw-beforeBloodDraw,-5);
+    }
+
+    @Test
+    public void shouldCareForPatient(){
+        Patient testPatient1 = new Patient("1111");
+        int beforeCare = testPatient1.getHealth();
+        underTest.careForPatient(testPatient1);
+        int afterCare = testPatient1.getHealth();
+        assertEquals(beforeCare-afterCare,-5);
+
     }
 }

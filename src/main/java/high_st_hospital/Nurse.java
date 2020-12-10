@@ -18,15 +18,24 @@ public class Nurse extends Employee implements MedicalDuties{
 
     @Override
     public void careForPatient(Patient patient) {
-
+        patient.improveHealth(5);
     }
 
     @Override
     public void drawBlood(Patient patient) {
-
+        patient.giveBlood(5);
     }
 
     public int numberOfPatients(){
         return patientsUnderCare.size();
+    }
+
+    public void lookAfter(Patient patient) {
+        patientsUnderCare.add(patient);
+    }
+
+    @Override
+    public String toString(){
+        return empName + "\t" + empNumber + "\t" + this.numberOfPatients();
     }
 }
