@@ -18,6 +18,7 @@ public abstract class Employee {
 		return "This employee's salary is " + getSalary();
 	}
 
+	@Override
 	public String toString(){
 		return empName + "\t" + empNumber;
 	}

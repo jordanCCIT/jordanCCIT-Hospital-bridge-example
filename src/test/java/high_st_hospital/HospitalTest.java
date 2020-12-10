@@ -1,8 +1,7 @@
 package high_st_hospital;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -40,7 +39,17 @@ public class HospitalTest {
         assertEquals(underTestHosp.getAllEmployees().contains(underTestNurse),true);
         assertEquals(allEmployees.contains(underTestSurgeon),true);
         assertEquals(allEmployees.contains(underTestDoc),true);
+    }
 
+    @Test
+    public void shouldFireSurgeon(){
+        underTestHosp.hire(underTestNurse);
+        underTestHosp.hire(underTestDoc);
+        underTestHosp.hire(underTestSurgeon);
+        underTestHosp.fire(underTestSurgeon);
+        Collection<Employee> allEmployees = new ArrayList<>(underTestHosp.getAllEmployees());
+        //assertEquals(allEmployees.contains(underTestSurgeon),false);
+        assertFalse(allEmployees.contains(underTestSurgeon));
     }
 
 }

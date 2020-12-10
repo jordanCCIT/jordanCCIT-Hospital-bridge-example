@@ -10,15 +10,15 @@ high_st_hospital/WaitingRoomTest.java
  high_st_hospital.WaitingRoomTest
 high_st_hospital/ReceptionistTest.java
  high_st_hospital.ReceptionistTest
-high_st_hospital/JanitorTest.java
- high_st_hospital.JanitorTest
-high_st_hospital/NurseTest.java
- high_st_hospital.NurseTest
 high_st_hospital/PatientTest.java
  high_st_hospital.PatientTest
 high_st_hospital/DoctorTest.java
  high_st_hospital.DoctorTest
-high_st_hospital/SurgeonTest.java
- high_st_hospital.SurgeonTest
 high_st_hospital/HospitalTest.java
  high_st_hospital.HospitalTest
+high_st_hospital/NurseTest.java
+ high_st_hospital.NurseTest
+high_st_hospital/SurgeonTest.java
+ high_st_hospital.SurgeonTest
+high_st_hospital/JanitorTest.java
+ high_st_hospital.JanitorTest

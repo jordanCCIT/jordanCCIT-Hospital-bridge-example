@@ -1,11 +1,11 @@
-high_st_hospital/ErBay.java
- high_st_hospital.ErBay
+high_st_hospital/Hospital.java
+ high_st_hospital.Hospital
 high_st_hospital/Employee.java
  high_st_hospital.Employee
 high_st_hospital/HospitalRoom.java
  high_st_hospital.HospitalRoom
-high_st_hospital/Hospital.java
- high_st_hospital.Hospital
+high_st_hospital/Janitor.java
+ high_st_hospital.Janitor
 high_st_hospital/Nurse.java
  high_st_hospital.Nurse
 high_st_hospital/Patient.java
@@ -18,5 +18,7 @@ high_st_hospital/WaitingRoom.java
  high_st_hospital.WaitingRoom
 high_st_hospital/Surgeon.java
  high_st_hospital.Surgeon
+high_st_hospital/ErBay.java
+ high_st_hospital.ErBay
 high_st_hospital/HospitalApp.java
  high_st_hospital.HospitalApp
